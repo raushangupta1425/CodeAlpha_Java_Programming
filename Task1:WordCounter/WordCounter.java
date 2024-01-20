@@ -1,15 +1,16 @@
 import java.util.Scanner;
-public class WordCounter {
-    public static void main(String[] args) {
+
+public class WordCounter{
+    public static void main(String[] args){
         Scanner sc= new Scanner(System.in);
-        System.out.println("Enter paragraph to count its words.\n");
+        System.out.println("Enter a paragraph.\n");
         int count=1;
-        String Words = sc.nextLine();
-        for(int i=0;i<Words.length()-1;i++){
-            if(Words.charAt(i) == ' ' && Words.charAt(i+1) != ' '){
-                count++;
+        String paragraph = sc.nextLine();
+        for(int i=0; i<paragraph.length()-1;i++){
+            if(paragraph.charAt(i) == ' ' && paragraph.charAt(i+1) != ' '){
+                count++;  
             }
         }
-        System.out.println("Number of total words in this paragraph is : "+count);
+        System.out.println("Number of total word count : "+count);
     }
 }
